@@ -19,7 +19,7 @@ class Bar(BaseModel):
 fooModel = IngestPipeline[Foo]("Foo", IngestPipelineConfig(
     ingest=True,
     stream=True,
-    table=False
+    table=True
 ))
 
 barModel = IngestPipeline[Bar]("Bar", IngestPipelineConfig(
