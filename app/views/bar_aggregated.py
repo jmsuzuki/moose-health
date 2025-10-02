@@ -1,6 +1,6 @@
 # This block is used to aggregate the data from the Bar table into a materialized view
 from moose_lib.dmv2 import MaterializedView, MaterializedViewOptions
-from app.ingest.models import barModel
+# from app.ingest.models import barModel
 from pydantic import BaseModel
 
 class BarAggregated(BaseModel):
@@ -22,11 +22,11 @@ FROM Bar
 GROUP BY toDayOfMonth(utc_timestamp)
 """
 
-barAggregatedMV = MaterializedView[BarAggregated](MaterializedViewOptions(
-    select_statement=select_query,
-    select_tables=[barModel.table],
-    table_name="bar_aggregated",
-    materialized_view_name="bar_aggregated_mv",
-    order_by_fields=["day_of_month"]
-))
+# barAggregatedMV = MaterializedView[BarAggregated](MaterializedViewOptions(
+#     select_statement=select_query,
+#     select_tables=[barModel.table],
+#     table_name="bar_aggregated",
+#     materialized_view_name="bar_aggregated_mv",
+#     order_by_fields=["day_of_month"]
+# ))
 
