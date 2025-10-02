@@ -16,11 +16,11 @@ class Foo(BaseModel):
 #     has_text: bool
 #     text_length: int
 
-fooModel = IngestPipeline[Foo]("Foo", IngestPipelineConfig(
-    ingest=True,
-    stream=False,
-    table=False
-))
+# fooModel = IngestPipeline[Foo]("Foo", IngestPipelineConfig(
+#     ingest=True,
+#     stream=False,
+#     table=False
+# ))
 
 # barModel = IngestPipeline[Bar]("Bar", IngestPipelineConfig(
 #     ingest=False,
