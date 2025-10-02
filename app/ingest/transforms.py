@@ -1,4 +1,4 @@
-from app.ingest.models import fooModel, barModel, Bar
+# from app.ingest.models import fooModel, barModel, Bar
 from datetime import datetime
 
 # Transform Foo events to Bar events
@@ -20,6 +20,6 @@ def print_foo_event(foo):
     print(f"  Optional Text: {foo.optional_text or 'None'}")
     print("---")
 
-fooModel.get_stream().add_consumer(print_foo_event)
+# fooModel.get_stream().add_consumer(print_foo_event)
 
 
