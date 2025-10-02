@@ -10,20 +10,20 @@ class Foo(BaseModel):
     timestamp: float
     optional_text: Optional[str]
 
-class Bar(BaseModel):
-    primary_key: Key[str]
-    utc_timestamp: datetime
-    has_text: bool
-    text_length: int
+# class Bar(BaseModel):
+#     primary_key: Key[str]
+#     utc_timestamp: datetime
+#     has_text: bool
+#     text_length: int
 
 fooModel = IngestPipeline[Foo]("Foo", IngestPipelineConfig(
     ingest=True,
-    stream=True,
-    table=True
+    stream=False,
+    table=False
 ))
 
-barModel = IngestPipeline[Bar]("Bar", IngestPipelineConfig(
-    ingest=False,
-    stream=True,
-    table=True
-))
+# barModel = IngestPipeline[Bar]("Bar", IngestPipelineConfig(
+#     ingest=False,
+#     stream=False,
+#     table=True
+# ))
