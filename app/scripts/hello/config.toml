@@ -1,7 +1,0 @@
-name = "hello"
-timeout = "5m"
-retries = 0
-schedule = ""
-tasks = ["say_hello"]
-
-

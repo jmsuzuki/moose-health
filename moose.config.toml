@@ -50,7 +50,7 @@ api_key = ""
 [authentication]
 
 [features]
-data_model_v2 = true
-olap = false
-workflows = true
 streaming_engine = false
+workflows = true
+olap = false
+data_model_v2 = true
